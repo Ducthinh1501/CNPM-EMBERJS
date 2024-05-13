@@ -6,5 +6,12 @@
 </div>
 
 {{!-- {{outlet}} --}}
+// update cart 
+function updatecart() {
+  var cart_item = document.getElementsByClassName("cart-items")[0];
+  var cart_rows = cart_item.getElementsByClassName("cart-row");
+  var total = 0;
+  for (var i = 0; i < cart_rows.length; i++) {
+    var cart_row = cart_rows[i]
 
 
