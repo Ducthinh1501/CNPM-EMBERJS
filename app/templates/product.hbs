@@ -25,4 +25,16 @@ for (var i = 0; i < add_cart.length; i++) {
     updatecart()
   })
 }
+function addItemToCart(title, price, img) {
+  var cartRow = document.createElement('div')
+  cartRow.classList.add('cart-row')
+  var cartItems = document.getElementsByClassName('cart-items')[0]
+  var cart_title = cartItems.getElementsByClassName('cart-item-title')
+  Nếu title của sản phẩm bằng với title mà bạn thêm vao giỏ hàng thì sẽ thông cho user.
+  for (var i = 0; i < cart_title.length; i++) {
+    if (cart_title[i].innerText == title) {
+      alert('Sản Phẩm Đã Có Trong Giỏ Hàng')
+      return
+    }
+  }
 </script>   
