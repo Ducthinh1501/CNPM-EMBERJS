@@ -1,19 +1,9 @@
-{{page-title "Product"}}
-<div class="navbar-category" id="container-categories"> </div>
-<div class="products">
-    <ul id="container-products">
-    </ul>
-</div>
-
-{{!-- {{outlet}} --}}
-// update cart 
-function updatecart() {
-  var cart_item = document.getElementsByClassName("cart-items")[0];
-  var cart_rows = cart_item.getElementsByClassName("cart-row");
-  var total = 0;
-  for (var i = 0; i < cart_rows.length; i++) {
-
-
-    var cart_row = cart_rows[i]
-
-
+// xóa cart
+var remove_cart = document.getElementsByClassName("btn-danger");
+for (var i = 0; i < remove_cart.length; i++) {
+  var button = remove_cart[i]
+  button.addEventListener("click", function () {
+    var button_remove = event.target
+    button_remove.parentElement.parentElement.remove()
+  })
+}
